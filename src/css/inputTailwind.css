@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* button */
+
+.btn {
+    @apply cursor-pointer rounded font-semibold text-sm px-7 py-1.5 border-2;
+}
+
+.btn-icon {
+    @apply cursor-pointer rounded font-semibold text-sm border-2;
+}
+
+.btn-disable {
+    @apply pointer-events-none opacity-50 select-none;
+}
+
+.not-allowed {
+    @apply cursor-not-allowed;
+}
+
+.btn-primary {
+    @apply transition duration-100 text-white bg-[#6D9886] hover:opacity-70 border-[#6D9886];
+}
