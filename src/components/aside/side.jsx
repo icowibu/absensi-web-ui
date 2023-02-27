@@ -1,4 +1,5 @@
-import { FileOutlined, PieChartOutlined, DashboardFilled, UserOutlined, DesktopOutlined, TeamOutlined } from '@ant-design/icons';
+import Icon ,{ CalendarFilled, StockOutlined, DiffFilled, FileAddFilled , EditFilled , DesktopOutlined, TeamOutlined } from '@ant-design/icons';
+import { PeopleIcon } from '../../assets/icon';
 
 import Dashboard from '../../views/dashboard/Dashboard';
 
@@ -6,20 +7,34 @@ const items = [
     {
         key: '1',
         label: 'dashboard',
-        icon: <DashboardFilled />,
+        icon: <StockOutlined />,
         routes: '/dashboard',
         children: [
             {
                 key: '1-a',
                 label: 'absen',
-                icon: <PieChartOutlined />,
+                icon: <EditFilled />,
                 routes: '/dashboard/absen',
-            }, {
-                key: '1-b',
-                label: 'data muda mudi',
-                icon: <PieChartOutlined />,
-                routes: '/dashboard/mm',
-                component: Dashboard,
+            }
+        ]
+    },
+    {
+        key: '2',
+        label: 'file',
+        icon: <FileAddFilled />,
+        routes: '/file',
+        children: [
+            {
+                key: '2-a',
+                label: 'tambah acara',
+                icon: <CalendarFilled />,
+                routes: '/file/event',
+            },
+            {
+                key: '2-b',
+                label: 'tambah anggota',
+                icon: <DiffFilled />,
+                routes: '/file/anggota',
             }
         ]
     },

@@ -5,6 +5,9 @@ import { fullScreen } from '../../redux/actions/layout/LayoutAction'
 
 // routes config
 import routes from '../../routes'
+import DashboardRoutes from '../../routes/dashboard'
+import FileRoutes from '../../routes/file'
+import ProtectRoutes from '../../routes/protect'
 
 const AContent = () => {
   const dispatch = useDispatch()
@@ -22,28 +25,17 @@ const AContent = () => {
 
   return (
     <div className="w-full h-full">
-      <Suspense fallback={<span>Loading</span>}>
         <Routes>
-          {routes.map((route, idx) => {
-            return (
-              route.element && (
-                <Route
-                  key={idx}
-                  path={route.path}
-                  exact={route.exact}
-                  name={route.name}
-                  element={<route.element />}
 
-                />
-              )
-            )
-          })}
-
-          <Route path="/" element={<Navigate to="dashboard" replace />} />
+          <Route element={<ProtectRoutes/>}>
+            <Route path='file/*' element={<FileRoutes />} />
+            <Route path="dashboard/*" element={<DashboardRoutes />} />
+          </Route>
+          
+          <Route path="/" element={<Navigate to="login" replace />} />
           <Route path="*" exact element={<Navigate exact to="404" replace />} />
 
         </Routes>
-      </Suspense>
     </div>
   )
 }

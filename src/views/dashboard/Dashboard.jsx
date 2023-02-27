@@ -9,12 +9,8 @@ const Dashboard = () => {
     const [collapsed, setCollapsed] = useState(false);
 
     return (
-        <div className='card bg-gray-400 w-full h-full'>
-            <img
-                src="./src/assets/logo.svg"
-                className="mx-auto w-[40px] my-2"
-                alt="Revota"
-            />
+        <div className=''>
+            dashboard
         </div>
 
 

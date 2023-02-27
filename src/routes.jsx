@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Page404 = React.lazy(() => import('./views/pages/page404/404'))
-
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 
 
