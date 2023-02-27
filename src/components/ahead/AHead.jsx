@@ -15,11 +15,13 @@ const AHead = () => {
     const dispatch = useDispatch()
     const location = useLocation()
     const { userBar, collapsed } = useSelector((state) => state.LayoutReducer)
-    console.log(userBar)
+
     let path = location.pathname
     const pathArray = path.split("/").filter(function (e) {
         return e != '';
     });
+
+    console.log(pathArray)
 
     return (
         <nav className="bg-white">
@@ -36,11 +38,9 @@ const AHead = () => {
 
                     <div className='flex-1'>
                         <Breadcrumb className="w-fit mx-auto">
-                            <Breadcrumb.Item className='fs-bold' href='/'>
-                                Home</Breadcrumb.Item>
                             {
-                                pathArray.map((e, i) =>
-                                    <Breadcrumb.Item key={i}>{e}</Breadcrumb.Item>
+                                pathArray.map((e, index) =>
+                                    <Breadcrumb.Item key={index} href={index === 0 ? `/${e}` : `${e}`} >{e}</Breadcrumb.Item>
                                 )
                             }
                         </Breadcrumb>

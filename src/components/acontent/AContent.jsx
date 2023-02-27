@@ -8,6 +8,7 @@ import routes from '../../routes'
 import DashboardRoutes from '../../routes/dashboard'
 import FileRoutes from '../../routes/file'
 import ProtectRoutes from '../../routes/protect'
+import Home from '../../views/pages/page404/home'
 
 const AContent = () => {
   const dispatch = useDispatch()
@@ -30,6 +31,7 @@ const AContent = () => {
           <Route element={<ProtectRoutes/>}>
             <Route path='file/*' element={<FileRoutes />} />
             <Route path="dashboard/*" element={<DashboardRoutes />} />
+            <Route path='home' element={<Home />} />
           </Route>
           
           <Route path="/" element={<Navigate to="login" replace />} />
