@@ -28,12 +28,8 @@ const AHead = () => {
             <div className="w-full">
                 <div className="relative flex h-16 items-center justify-around w-full px-[10px]">
 
-                    {/* trigger nav */}
                     <div className='flex-1'>
-                        {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-                            className: 'trigger',
-                            onClick: () => { dispatch(SwitchCollapsed(!collapsed)) }
-                        })}
+
                     </div>
 
                     <div className='flex-1'>
