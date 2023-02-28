@@ -1,4 +1,4 @@
-import Icon ,{ CalendarFilled, StockOutlined, DiffFilled, FileAddFilled , EditFilled , DesktopOutlined, TeamOutlined } from '@ant-design/icons';
+import Icon, { CalendarFilled, StockOutlined, DiffFilled, FileAddFilled, EditFilled, DesktopOutlined, TeamOutlined } from '@ant-design/icons';
 import { PeopleIcon } from '../../assets/icon';
 
 import Dashboard from '../../views/dashboard/Dashboard';
@@ -28,7 +28,7 @@ const items = [
                 key: '2-a',
                 label: 'tambah acara',
                 icon: <CalendarFilled />,
-                routes: '/file/event',
+                routes: '/file/acara',
             },
             {
                 key: '2-b',

@@ -23,7 +23,7 @@ const OnAtLeastTablet = layout.isAtLeast('tablet');
 const OnMobile = layout.is('mobile');
 
 const Aside = () => {
-  
+
   const dispatch = useDispatch()
   const navigate = useNavigate();
   const { collapsed } = useSelector((state) => state.LayoutReducer)
@@ -32,7 +32,7 @@ const Aside = () => {
   return (
     <>
       <OnMobile>
-        <Sider collapsible collapsed={collapsed} onCollapse={(value) => dispatch(SwitchCollapsed(value))} trigger={null} style={{ position: "absolute", height: "100%" }} className={collapsed ? "left-[-80px]" : ""} >
+        <Sider collapsible collapsed={collapsed} onCollapse={(value) => dispatch(SwitchCollapsed(value))} trigger={null} style={{ position: "absolute", height: "100%", zIndex: "20" }} className={collapsed ? "left-[-80px]" : ""} >
           {collapsed ?
             <div className='aspect-auto h-fit'>
               <h1 className='font-headline-1 text-[1.5rem] text-center py-[15px] text-white'>MJ</h1>
@@ -58,7 +58,7 @@ const Aside = () => {
       </OnMobile>
 
       <OnAtLeastTablet>
-        <Sider collapsible collapsed={collapsed} onCollapse={(value) => dispatch(SwitchCollapsed(value))} trigger={null} style={{ position: "absolute", height: "100%" }}>
+        <Sider collapsible collapsed={collapsed} onCollapse={(value) => dispatch(SwitchCollapsed(value))} trigger={null} style={{ position: "absolute", height: "100%", zIndex: "20" }}>
           {collapsed ?
             <div className='aspect-auto h-fit'>
               <h1 className='font-headline-1 text-[1.5rem] text-center py-[15px] text-white'>MJ</h1>
@@ -83,12 +83,12 @@ const Aside = () => {
         </Sider>
       </OnAtLeastTablet>
 
-      <div className='flex-1 bottom-[20px] left-[20px] absolute w-[50px] h-[50px] bg-white rounded-full text-black text-center text-[25px] flex items-center justify-center'>
-          {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-            className: 'trigger',
-            onClick: () => { dispatch(SwitchCollapsed(!collapsed)) }
-          })}
-        </div>
+      <div className='flex-1 bottom-[20px] left-[20px] absolute w-[50px] h-[50px] bg-white rounded-full text-black text-center text-[25px] flex items-center justify-center z-30'>
+        {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+          className: 'trigger',
+          onClick: () => { dispatch(SwitchCollapsed(!collapsed)) }
+        })}
+      </div>
     </>
 
 
