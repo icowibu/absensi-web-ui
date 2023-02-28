@@ -31,7 +31,7 @@ const App = () => {
                     {/* navigasi left */}
                     <Aside />
 
-                    <Layout className="site-layout pl-[80px]">
+                    <Layout className="site-layout md:pl-[80px] sm:pl-[0px]">
                         <AHead />
                         <Layout className='flex overflow-auto'>
                             <Content

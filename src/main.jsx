@@ -4,8 +4,6 @@ import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-d
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
-import "./css/Costum.css"
-import "./main.css"
 import "./css/outputTailwind.css"
 import { Provider } from 'react-redux';
 import store from './store';

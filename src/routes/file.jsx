@@ -4,14 +4,14 @@ import Index from "../views/file";
 
 // component
 import Event from "../views/file/Event";
-import People from "../views/file/People";
+import {Anggota} from "../views/file/anggota";
 
 const FileRoutes = () => {
   return (
     <Routes>
       <Route index element={<Index />} />
       <Route path="acara" element={<Event />} />
-      <Route path="orang" element={<People />} />
+      <Route path="anggota" element={<Anggota />} />
     </Routes>
   );
 };
