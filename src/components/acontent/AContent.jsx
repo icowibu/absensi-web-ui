@@ -1,7 +1,8 @@
 import React, { Suspense } from 'react'
 import { useDispatch } from 'react-redux'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
-import { fullScreen } from '../../redux/actions/layout/LayoutAction'
+import { useSelector } from 'react-redux'
+import { setFullScreen } from '../../redux/slice/layoutSlice'
 
 // routes config
 import routes from '../../routes'
@@ -18,9 +19,9 @@ const AContent = () => {
   let active = routes.find((e) => e.path == location.pathname)
   if (active) {
     if (active.fullScreen) {
-      dispatch(fullScreen(true))
+      dispatch(setFullScreen(true))
     } else if (active.fullScreen == undefined) {
-      dispatch(fullScreen(false))
+      dispatch(setFullScreen(false))
     }
   }
 

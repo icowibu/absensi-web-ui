@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout, Breadcrumb } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
-import { SetCollapsed, SwitchCollapsed, SwitchUserBar } from '../../redux/actions/layout/LayoutAction';
+import {switchUserBar } from '../../redux/slice/layoutSlice';
 import { Avatar, Space } from 'antd';
 import { useLocation } from 'react-router';
 import {
@@ -14,14 +14,12 @@ const { Header } = Layout;
 const AHead = () => {
     const dispatch = useDispatch()
     const location = useLocation()
-    const { userBar, collapsed } = useSelector((state) => state.LayoutReducer)
+    const { userBar } = useSelector((state) => state.layout)
 
     let path = location.pathname
     const pathArray = path.split("/").filter(function (e) {
         return e != '';
     });
-
-    console.log(pathArray)
 
     return (
         <nav className="bg-white">
@@ -54,7 +52,7 @@ const AHead = () => {
                     <div className="flex-1 justify-self-end">
                         <div className="relative w-fit ml-auto">
                             <div>
-                                <button type="button" className="flex rounded text-sm" id="user-menu-button" aria-expanded="false" aria-haspopup="true" onClick={() => dispatch(SwitchUserBar(userBar))}>
+                                <button type="button" className="flex rounded text-sm" id="user-menu-button" aria-expanded="false" aria-haspopup="true" onClick={() => dispatch(switchUserBar(userBar))}>
                                     <Space wrap size={16}>
                                         <Avatar shape="square" className='bg-[#6D9886]' size={40} >M</Avatar>
                                     </Space>

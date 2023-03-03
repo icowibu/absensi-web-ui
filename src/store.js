@@ -1,6 +1,12 @@
-import { createStore, compose, applyMiddleware } from 'redux'
-import thunk from 'redux-thunk'
-import reducers from './redux/reducers'
+import { configureStore } from "@reduxjs/toolkit";
+import thunk from "redux-thunk";
+import layoutReducer from "./redux/slice/layoutSlice";
 
-const store = createStore(reducers, compose(applyMiddleware(thunk)))
-export default store
+const store = configureStore({
+  reducer: {
+    layout: layoutReducer,
+  },
+  middleware: [thunk],
+});
+
+export default store;

@@ -7,7 +7,7 @@ import Aside from '../components/aside/Aside';
 
 const { Content } = Layout;
 const App = () => {
-    const { fullScreen } = useSelector((state) => state.LayoutReducer)
+    const { fullScreen } = useSelector((state) => state.layout)
     return (
         <div className='w-full h-full'>
 
