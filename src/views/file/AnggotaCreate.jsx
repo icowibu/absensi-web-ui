@@ -33,7 +33,7 @@ const handleTanggal = (value) => {
   console.log(value);
 };
 
-const Anggota = () => {
+const AnggotaCreate = () => {
   return (
     <div>
       <h1 className="font-headline-1 text-[2.5rem] font-[800] text-slate-800 text-center">Tambah Anggota</h1>
@@ -64,4 +64,4 @@ const Anggota = () => {
   );
 }
 
-export { Anggota }
+export { AnggotaCreate }

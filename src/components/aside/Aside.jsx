@@ -35,11 +35,11 @@ const Aside = () => {
         <Sider collapsible collapsed={collapsed} onCollapse={(value) => dispatch(switchCollapsed(value))} trigger={null} style={{ position: "absolute", height: "100%", zIndex: "20" }} className={collapsed ? "left-[-80px]" : ""} >
           {collapsed ?
             <div className='aspect-auto h-fit'>
-              <h1 className='font-headline-1 text-[1.5rem] text-center py-[15px] text-white'>MJ</h1>
+              <h1 className='font-headline-sub text-[1.5rem] text-center py-[15px] text-white'>MJ</h1>
             </div>
             :
             <div className="aspect-auto">
-              <h1 className='font-headline-1 text-[1.5rem] text-white text-center py-[15px]'>MM JATEN</h1>
+              <h1 className='font-headline-sub text-[1.5rem] text-white text-center py-[15px]'>MM JATEN</h1>
             </div>
 
           }
@@ -61,11 +61,11 @@ const Aside = () => {
         <Sider collapsible collapsed={collapsed} onCollapse={(value) => dispatch(switchCollapsed(value))} trigger={null} style={{ position: "absolute", height: "100%", zIndex: "20" }}>
           {collapsed ?
             <div className='aspect-auto h-fit'>
-              <h1 className='font-headline-1 text-[1.5rem] text-center py-[15px] text-white'>MJ</h1>
+              <h1 className='font-headline-sub text-[1.5rem] text-center py-[15px] text-white'>MJ</h1>
             </div>
             :
             <div className="aspect-auto">
-              <h1 className='font-headline-1 text-[1.5rem] text-white text-center py-[15px]'>MM JATEN</h1>
+              <h1 className='font-headline-sub text-[1.5rem] text-white text-center py-[15px]'>MM JATEN</h1>
             </div>
 
           }

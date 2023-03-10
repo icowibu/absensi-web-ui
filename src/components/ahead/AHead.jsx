@@ -21,6 +21,16 @@ const AHead = () => {
         return e != '';
     });
 
+    let displayPath = [];
+    displayPath.push(...pathArray)
+    
+    for (let i = 1; i < pathArray.length; i++) {
+        pathArray[i] = pathArray[i-1] + '/' + pathArray[i];
+    }
+
+    console.log(pathArray);
+
+    
     return (
         <nav className="bg-white">
             <div className="w-full">
@@ -34,7 +44,7 @@ const AHead = () => {
                         <Breadcrumb className="w-fit mx-auto">
                             {
                                 pathArray.map((e, index) =>
-                                    <Breadcrumb.Item key={index} href={index === 0 ? `/${e}` : `${e}`} >{e}</Breadcrumb.Item>
+                                    <Breadcrumb.Item key={index} href={`/${e}`} >{displayPath[index]}</Breadcrumb.Item>
                                 )
                             }
                         </Breadcrumb>

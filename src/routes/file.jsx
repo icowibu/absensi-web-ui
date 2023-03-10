@@ -3,17 +3,20 @@ import { Route, Routes } from "react-router";
 import Index from "../views/file";
 
 // component
-import { Acara } from "../views/file/Event";
-import { Anggota } from "../views/file/anggota";
-import AnggotaView from "../views/file/anggotaView";
+import {AnggotaCreate} from "../views/file/AnggotaCreate";
+import {AnggotaView} from "../views/file/AnggotaView";
+
+import {AcaraView} from "../views/file/AcaraView";
+import {AcaraCreate} from "../views/file/AcaraCreate";
 
 const FileRoutes = () => {
   return (
     <Routes>
       <Route index element={<Index />} />
-      <Route path="acara" element={<Acara />} />
+      <Route path="acara" element={<AcaraView />} />
+      <Route path="acara/buat" element={<AcaraCreate />} />
       <Route path="anggota" element={<AnggotaView />} />
-      <Route path="anggota/buat" element={<Anggota />} />
+      <Route path="anggota/buat" element={<AnggotaCreate />} />
     </Routes>
   );
 };

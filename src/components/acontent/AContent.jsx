@@ -36,8 +36,6 @@ const AContent = () => {
           </Route>
           
           <Route path="/" element={<Navigate to="login" replace />} />
-          <Route path="*" exact element={<Navigate exact to="404" replace />} />
-
         </Routes>
     </div>
   )

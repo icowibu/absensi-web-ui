@@ -33,7 +33,7 @@ const handleTanggal = (value) => {
     console.log(value);
 };
 
-const Acara = () => {
+const AcaraCreate = () => {
     return (
         <div>
             <h1 className="font-headline-1 text-[2.5rem] font-[800] text-slate-800 text-center">Tambah Acara</h1>
@@ -54,4 +54,4 @@ const Acara = () => {
     );
 }
 
-export { Acara }
+export { AcaraCreate }
